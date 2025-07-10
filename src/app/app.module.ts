@@ -13,7 +13,7 @@ import { FedaPayCheckoutModule } from 'fedapay-angular';
     BrowserModule,
     AppRoutingModule,
     FedaPayCheckoutModule.forRoot({
-      public_key: 'pk_sandbox_XXXXXXXXXXX', // Remplacer par votre clé publique
+      public_key: 'pk_sandbox_XXXXXXXXXXXXXX',
       app_id: 'ionic.app'
   })
   ],

@@ -11,7 +11,7 @@ export class AppComponent {
 
   checkoutButtonOptions: CheckoutOptions = {
       transaction: {
-          amount: 75000,
+          amount: 150000,
           description: 'Achat de montre de luxe'
       },
       currency: {
@@ -19,16 +19,16 @@ export class AppComponent {
       },
       button: {
           class: 'btn btn-outline-primary rounded-1 float-end',
-          text: 'Payer 75.000 FCFA'
+          text: 'Payer 150000 FCFA'
       },
       onComplete(resp: any) {
           const FedaPay = (window as any) ['FedaPay'];
           if (resp.reason === FedaPay.DIALOG_DISMISSED) {
-            window.location.href = "http://localhost:4200";
+            window.location.href = "http://angularsample.fedapay.com";
             alert('Paiement annulé');
           } else {
             alert('Transaction terminée : ' + resp.reason);
-            window.location.href = "http://localhost:4200";
+            window.location.href = "http://angularsample.fedapay.com";
   
           }
 
@@ -38,7 +38,7 @@ export class AppComponent {
 
   checkoutEmbedOptions: CheckoutOptions = {
       transaction: {
-          amount: 100000,
+          amount: 150000,
           description: 'Achat de montre de luxe'
       },
       currency: {
